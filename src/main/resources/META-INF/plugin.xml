@@ -1,19 +1,14 @@
 <idea-plugin>
     <id>org.zksky.TabColor</id>
-    <name>TabColor</name>
-    <vendor email="zhoukuansky@163.com" url="http://www.webank.com">webank</vendor>
+    <name>Tab Color</name>
+    <version>1.0</version>
+    <vendor email="zhoukuansky@163.com" url="https://www.zksky.top/">kuanzhou</vendor>
 
-<!--    <description><![CDATA[-->
-<!--    Enter short description for your plugin here.<br>-->
-<!--    <em>most HTML tags may be used</em>-->
-<!--    ]]></description>-->
     <description><![CDATA[
-    change tab's color, help coder code.<br>
-    <em>tab color change</em>
+    By changing the color of the important tab, developers will be liberated from the confusion of a bunch of tabs!
+    <em>Change tab's color. Improving coder efficiency.</em>
     ]]></description>
 
-    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">>
@@ -23,9 +18,8 @@
                              instance="config.TabColorSettingsConfigurable"/>
         <projectService serviceImplementation="config.TabColorConfig"/>
     </extensions>
-        <!-- Add your extensions here -->
+
     <actions>
-        <!-- Add your actions here -->
         <action id="Clear All Color" class="action.ClearAllColorAction" text="Clear All Color"
                 description="Clear all tab's color">
             <add-to-group group-id="EditorTabPopupMenu" anchor="first"/>
@@ -38,5 +32,5 @@
         </action>
     </actions>
 
-    <idea-version since-build="191.0"/>
+    <idea-version since-build="193.0"/>
 </idea-plugin>
