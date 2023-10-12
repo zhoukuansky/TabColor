@@ -1,0 +1,42 @@
+<idea-plugin>
+    <id>org.zksky.TabColor</id>
+    <name>TabColor</name>
+    <vendor email="zhoukuansky@163.com" url="http://www.webank.com">webank</vendor>
+
+<!--    <description><![CDATA[-->
+<!--    Enter short description for your plugin here.<br>-->
+<!--    <em>most HTML tags may be used</em>-->
+<!--    ]]></description>-->
+    <description><![CDATA[
+    change tab's color, help coder code.<br>
+    <em>tab color change</em>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">>
+        <postStartupActivity implementation="TabColorStartupActivity"/>
+        <projectConfigurable groupId="tools" displayName="Tab Color Plugin"
+                             id="preference.TabColorSettingsConfigurable"
+                             instance="config.TabColorSettingsConfigurable"/>
+        <projectService serviceImplementation="config.TabColorConfig"/>
+    </extensions>
+        <!-- Add your extensions here -->
+    <actions>
+        <!-- Add your actions here -->
+        <action id="Clear All Color" class="action.ClearAllColorAction" text="Clear All Color"
+                description="Clear all tab's color">
+            <add-to-group group-id="EditorTabPopupMenu" anchor="first"/>
+        </action>
+        <action id="Clear Color" class="action.ClearColorAction" text="Clear Color" description="Clear a  tab&#39;s color">
+            <add-to-group group-id="EditorTabPopupMenu" anchor="first"/>
+        </action>
+        <action id="Tab Color" class="action.TabColorAction" text="Tab Color" description="Select a tab to change color">
+            <add-to-group group-id="EditorTabPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+    <idea-version since-build="191.0"/>
+</idea-plugin>
