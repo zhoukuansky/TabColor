@@ -10,7 +10,7 @@ This is an IDEA plugin. By changing the color of core Tabs, developers are freed
 ## Tutorial
 
 #### Plugin usage
-1. Right-click any of your Tabs, and the top three options are the functions provided by this plugin.
+Right-click any of your Tabs, and the top three options are the functions provided by this plugin.
 + Tab Color：Color the selected label.
 + Clear Tab Color：Clear the color of the selected label.
 + Clear all Color：Clear the color of all selected tags.
