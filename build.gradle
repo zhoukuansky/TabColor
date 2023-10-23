@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'org.zksky'
-version '1.0'
+version '1.1'
 
 repositories {
     mavenCentral()
@@ -21,6 +21,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      TabColor-1.0.<br>
+      TabColor-1.1.<br>
+      add icon.<br>
       <em></em>"""
 }
